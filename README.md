@@ -15,14 +15,10 @@ int63_abc := snowflake.NewID63()
    比如你们公司机器名是  some_module_cn01.123.docker, 这个函数就是获取结果是123
 
 // 最多支持1024个实例
-func getWorkerId_1024() uint64 {
-   hostname := getHostname()
-   instNo := getInstanceId()
-   if instNo < 0 {
-      instNo = int64(hashString(hostname))
-   }
-   instNo = instNo & ((1 << workerBits) - 1) // 保留10位
-   return uint64(instNo)
+func getInstanceId() int64 {
+   // some_module_cn01.123.docker 
+   // 写自己的代码, 想办法截取机器名里的实例号, 
+   // 返回结果应该是 int64(123)
 }
 ```
 
