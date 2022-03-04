@@ -10,3 +10,10 @@
 4. 数字是 int63，有符号整数，转换为字符串最长是19位
 5. 并发安全
 6. 纯本地操作, 无网络IO
+
+
+# 用法
+```
+import snowflake
+int63_abc := snowflake.NewID63()
+```
