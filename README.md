@@ -1,7 +1,11 @@
 # snowflake_go
 分布式唯一ID生成器, snowflake golang 版本的实现
 
-
+# 用法
+```
+import snowflake
+int63_abc := snowflake.NewID63()
+```
 
 # 特点 
 1. 基本保证单调递增顺序 (仅时钟回拨时保证不了)
@@ -12,8 +16,3 @@
 6. 纯本地操作, 无网络IO
 
 
-# 用法
-```
-import snowflake
-int63_abc := snowflake.NewID63()
-```
